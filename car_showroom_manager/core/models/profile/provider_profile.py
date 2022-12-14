@@ -8,12 +8,12 @@ from core.models.provider import Provider
 from core.models.abstract.is_active import IsActive
 
 
-class ProviderProvile(IsActive):
+class ProviderProfile(IsActive):
     """
     Model to represent information about Provider
     """
 
-    user = models.OneToOneField(
+    provider = models.OneToOneField(
         Provider, on_delete=models.CASCADE, related_name="provider_profile"
     )
     provider_name = models.CharField(max_length=30)

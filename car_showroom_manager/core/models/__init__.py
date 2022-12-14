@@ -6,7 +6,7 @@ from core.models.user import User
 
 from core.models.profile import ConsumerProfile
 from core.models.profile import CarShowroomProfile
-from core.models.profile import ProviderProvile
+from core.models.profile import ProviderProfile
 
 from core.models.consumer import Consumer
 

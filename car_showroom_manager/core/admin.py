@@ -20,7 +20,7 @@ from core.models import User
 
 from core.models import ConsumerProfile
 from core.models import CarShowroomProfile
-from core.models import ProviderProvile
+from core.models import ProviderProfile
 
 from core.models import Consumer
 
@@ -43,7 +43,7 @@ admin.site.register(ProviderDiscount)
 
 admin.site.register(ConsumerProfile)
 admin.site.register(CarShowroomProfile)
-admin.site.register(ProviderProvile)
+admin.site.register(ProviderProfile)
 
 admin.site.register(Consumer)
 admin.site.register(PurchaseHistory)
