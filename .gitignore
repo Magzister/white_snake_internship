@@ -140,3 +140,6 @@ data/
 
 #mypy config
 mypy.ini
+
+#pre-commit
+.pre-commit-config.yaml
