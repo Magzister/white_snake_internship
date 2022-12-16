@@ -134,3 +134,9 @@ Pipfile.lock
 
 #static
 data/
+
+#flake8 config
+.flake8
+
+#mypy config
+mypy.ini
