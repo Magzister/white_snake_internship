@@ -143,3 +143,12 @@ mypy.ini
 
 #pre-commit
 .pre-commit-config.yaml
+
+#mypy run script for pre-commit
+run_mypy
+
+#pylint run script for pre-commit
+run_pylint
+
+#config file for pylint
+.pylintrc
