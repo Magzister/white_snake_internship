@@ -51,7 +51,10 @@ class Migration(migrations.Migration):
                 ("location_city", models.CharField(max_length=30)),
                 ("locarion_street", models.CharField(max_length=30)),
                 ("location_house", models.CharField(max_length=30)),
-                ("money", models.DecimalField(decimal_places=2, max_digits=12)),
+                (
+                    "money",
+                    models.DecimalField(decimal_places=2, max_digits=12),
+                ),
             ],
             options={
                 "db_table": "car_showroom",
@@ -71,7 +74,10 @@ class Migration(migrations.Migration):
                 ),
                 ("is_active", models.BooleanField(default=True)),
                 ("model", models.CharField(max_length=30)),
-                ("value", models.DecimalField(decimal_places=2, max_digits=10)),
+                (
+                    "value",
+                    models.DecimalField(decimal_places=2, max_digits=10),
+                ),
                 ("amount", models.IntegerField()),
                 (
                     "car_chowroom",
@@ -121,7 +127,10 @@ class Migration(migrations.Migration):
                 ),
                 ("is_active", models.BooleanField(default=True)),
                 ("model", models.CharField(max_length=30)),
-                ("value", models.DecimalField(decimal_places=2, max_digits=10)),
+                (
+                    "value",
+                    models.DecimalField(decimal_places=2, max_digits=10),
+                ),
                 ("amount", models.IntegerField()),
                 (
                     "provider",
@@ -150,7 +159,10 @@ class Migration(migrations.Migration):
                 ),
                 ("is_active", models.BooleanField(default=True)),
                 ("amount", models.IntegerField()),
-                ("value", models.DecimalField(decimal_places=2, max_digits=12)),
+                (
+                    "value",
+                    models.DecimalField(decimal_places=2, max_digits=12),
+                ),
                 ("purchase_datetime", models.DateTimeField(auto_now_add=True)),
                 (
                     "car_showroom",
@@ -197,7 +209,10 @@ class Migration(migrations.Migration):
                 ("body_type", models.CharField(max_length=30)),
                 ("number_of_seats", models.IntegerField()),
                 ("load_capacity", models.IntegerField()),
-                ("weight", models.DecimalField(decimal_places=1, max_digits=5)),
+                (
+                    "weight",
+                    models.DecimalField(decimal_places=1, max_digits=5),
+                ),
                 (
                     "engine_type",
                     models.CharField(
@@ -276,7 +291,10 @@ class Migration(migrations.Migration):
                 ),
                 ("is_active", models.BooleanField(default=True)),
                 ("amount", models.IntegerField()),
-                ("value", models.DecimalField(decimal_places=2, max_digits=12)),
+                (
+                    "value",
+                    models.DecimalField(decimal_places=2, max_digits=12),
+                ),
                 ("purchase_datetime", models.DateTimeField(auto_now_add=True)),
                 (
                     "car_showroom",
@@ -387,7 +405,10 @@ class Migration(migrations.Migration):
                 ("body_type", models.CharField(max_length=30)),
                 ("number_of_seats", models.IntegerField()),
                 ("load_capacity", models.IntegerField()),
-                ("weight", models.DecimalField(decimal_places=1, max_digits=5)),
+                (
+                    "weight",
+                    models.DecimalField(decimal_places=1, max_digits=5),
+                ),
                 (
                     "engine_type",
                     models.CharField(
@@ -429,7 +450,10 @@ class Migration(migrations.Migration):
                 ("body_type", models.CharField(max_length=30)),
                 ("number_of_seats", models.IntegerField()),
                 ("load_capacity", models.IntegerField()),
-                ("weight", models.DecimalField(decimal_places=1, max_digits=5)),
+                (
+                    "weight",
+                    models.DecimalField(decimal_places=1, max_digits=5),
+                ),
                 (
                     "engine_type",
                     models.CharField(
@@ -518,7 +542,8 @@ class Migration(migrations.Migration):
                 (
                     "provider",
                     models.ForeignKey(
-                        on_delete=django.db.models.deletion.CASCADE, to="core.provider"
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="core.provider",
                     ),
                 ),
             ],

@@ -18,7 +18,7 @@ class CarShowroomVehicleCharacteristics(VehicleCharacteristics, IsActive):
     vehicle = models.OneToOneField(
         CarShowroomVehisle,
         on_delete=models.CASCADE,
-        related_name="characteristics"
+        related_name="characteristics",
     )
 
     class Meta:

@@ -152,3 +152,6 @@ run_pylint
 
 #config file for pylint
 .pylintrc
+
+#black config file
+pyproject.toml

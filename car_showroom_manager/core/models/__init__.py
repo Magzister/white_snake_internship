@@ -24,11 +24,15 @@ from .purchase_history.user_purchase_history import UserPurchaseHistory
 from .purchase_history.provider_purchase_history import ProviderPurchaseHistory
 
 # vehicle characteristics
-from .car_showroom.desired_vehicle_characteristics import DesiredVehicleCharacteristics
+from .car_showroom.desired_vehicle_characteristics import (
+    DesiredVehicleCharacteristics,
+)
 from .car_showroom.car_showroom_vehicle_characteristics import (
     CarShowroomVehicleCharacteristics,
 )
-from .provider.provider_vehicle_characteristics import ProviderVehicleCharacteristics
+from .provider.provider_vehicle_characteristics import (
+    ProviderVehicleCharacteristics,
+)
 
 # model just to check how static files are managed
 from .attachment_sample import AttachmentSample

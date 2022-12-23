@@ -17,14 +17,12 @@ class ProviderSpecialOffer(SpecialOffer, IsActive):
     """
 
     provider = models.ForeignKey(
-        Provider,
-        on_delete=models.CASCADE,
-        related_name="special_offers"
+        Provider, on_delete=models.CASCADE, related_name="special_offers"
     )
     vehicle = models.ForeignKey(
         ProviderVehicle,
         on_delete=models.CASCADE,
-        related_name="special_offers"
+        related_name="special_offers",
     )
 
     class Meta:

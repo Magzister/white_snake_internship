@@ -18,7 +18,7 @@ class DesiredVehicleCharacteristics(VehicleCharacteristics, IsActive):
     car_showroom = models.ForeignKey(
         CarShowroom,
         on_delete=models.CASCADE,
-        related_name="desired_characteristics"
+        related_name="desired_characteristics",
     )
 
     class Meta:

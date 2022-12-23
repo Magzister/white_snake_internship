@@ -13,7 +13,7 @@ class VehicleCharacteristics(models.Model):
     ENGINE_TYPE_CHOICES = [
         ("P", "Petrol"),
         ("D", "Diesel"),
-        ("E", "Electricity")
+        ("E", "Electricity"),
     ]
 
     body_type = models.CharField(max_length=30)

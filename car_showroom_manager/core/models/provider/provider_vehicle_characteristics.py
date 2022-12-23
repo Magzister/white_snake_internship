@@ -18,7 +18,7 @@ class ProviderVehicleCharacteristics(VehicleCharacteristics, IsActive):
     vehicle = models.OneToOneField(
         ProviderVehicle,
         on_delete=models.CASCADE,
-        related_name="characteristics"
+        related_name="characteristics",
     )
 
     class Meta:

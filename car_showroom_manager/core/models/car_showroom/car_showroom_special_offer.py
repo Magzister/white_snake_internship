@@ -17,14 +17,12 @@ class CarShowroomSpecialOffer(SpecialOffer, IsActive):
     """
 
     car_showroom = models.ForeignKey(
-        CarShowroom,
-        on_delete=models.CASCADE,
-        related_name="special_offers"
+        CarShowroom, on_delete=models.CASCADE, related_name="special_offers"
     )
     vehicle = models.ForeignKey(
         CarShowroomVehisle,
         on_delete=models.CASCADE,
-        related_name="special_offers"
+        related_name="special_offers",
     )
 
     class Meta:

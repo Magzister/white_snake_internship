@@ -18,7 +18,7 @@ class ProviderPurchaseHistory(History, IsActive):
     provider = models.ForeignKey(
         Provider,
         on_delete=models.CASCADE,
-        related_name="provider_purchase_history"
+        related_name="provider_purchase_history",
     )
     vehicle = models.ForeignKey(
         ProviderVehicle,
