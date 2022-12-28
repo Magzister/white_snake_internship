@@ -4,7 +4,7 @@ Module with purchase history abstract model
 
 from django.db import models
 
-from core.models.car_showroom.car_showroom import CarShowroom
+from core.models.car_showroom import CarShowroom
 
 
 class History(models.Model):

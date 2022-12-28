@@ -2,37 +2,27 @@
 Module where models are imported for django
 """
 
-# user's profile
-from .profile.profile import Profile
+from core.models.user import User
 
-# car showroom models
-from .car_showroom.car_showroom import CarShowroom
-from .car_showroom.car_showroom_vehicle import CarShowroomVehisle
-from .car_showroom.car_showroom_special_offer import CarShowroomSpecialOffer
+from core.models.profile import ConsumerProfile
+from core.models.profile import CarShowroomProfile
+from core.models.profile import ProviderProvile
 
-# provider models
-from .provider.provider import Provider
-from .provider.provider_vehicle import ProviderVehicle
-from .provider.provider_special_offer import ProviderSpecialOffer
-from .provider.provider_discount import ProviderDiscount
+from core.models.consumer import Consumer
 
-# m2m model between car showroom and provider
-from .m2m.car_showroom_provider import CarShowroomProvider
+from core.models.car_showroom import CarShowroom
 
-# purchase history models
-from .purchase_history.user_purchase_history import UserPurchaseHistory
-from .purchase_history.provider_purchase_history import ProviderPurchaseHistory
+from core.models.special_offer import SpecialOffer
 
-# vehicle characteristics
-from .car_showroom.desired_vehicle_characteristics import (
-    DesiredVehicleCharacteristics,
-)
-from .car_showroom.car_showroom_vehicle_characteristics import (
-    CarShowroomVehicleCharacteristics,
-)
-from .provider.provider_vehicle_characteristics import (
-    ProviderVehicleCharacteristics,
-)
+from core.models.provider import Provider
+from core.models.provider import ProviderDiscount
 
-# model just to check how static files are managed
-from .attachment_sample import AttachmentSample
+from core.models.m2m import CarShowroomProvider
+
+from core.models.purchase_history import PurchaseHistory
+
+from core.models.vehicle import Vehicle
+from core.models.vehicle import UserVehicleCharacteristics
+from core.models.vehicle import DesiredVehicleCharacteristics
+
+from core.models.attachment_sample import AttachmentSample

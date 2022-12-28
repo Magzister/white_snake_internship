@@ -4,8 +4,8 @@ Module with model of provider discount for regular customers
 
 from django.db import models
 
-from .provider import Provider
-from ..abstract.is_active import IsActive
+from core.models.provider.provider import Provider
+from core.models.abstract import IsActive
 
 
 class ProviderDiscount(IsActive):

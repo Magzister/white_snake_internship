@@ -5,9 +5,9 @@ with additional information about number of purchases
 
 from django.db import models
 
-from ..car_showroom.car_showroom import CarShowroom
-from ..provider.provider import Provider
-from ..abstract.is_active import IsActive
+from core.models.car_showroom import CarShowroom
+from core.models.provider import Provider
+from core.models.abstract import IsActive
 
 
 class CarShowroomProvider(IsActive):
@@ -16,8 +16,12 @@ class CarShowroomProvider(IsActive):
     with additional information as number of purchases
     """
 
-    car_showroom = models.ForeignKey(CarShowroom, on_delete=models.CASCADE)
-    provider = models.ForeignKey(Provider, on_delete=models.CASCADE)
+    car_showroom = models.ForeignKey(
+        CarShowroom, on_delete=models.CASCADE, related_name="car_showroom_user"
+    )
+    provider = models.ForeignKey(
+        Provider, on_delete=models.CASCADE, related_name="provider_user"
+    )
     number_of_purchases = models.IntegerField()
 
     def __str__(self):

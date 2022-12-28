@@ -4,9 +4,9 @@ Module with desired vehicle characteristics of car showroom
 
 from django.db import models
 
-from ..abstract.vehicle_characteristics import VehicleCharacteristics
-from ..abstract.is_active import IsActive
-from .car_showroom import CarShowroom
+from core.models.abstract import VehicleCharacteristics
+from core.models.abstract import IsActive
+from core.models.car_showroom import CarShowroom
 
 
 class DesiredVehicleCharacteristics(VehicleCharacteristics, IsActive):
