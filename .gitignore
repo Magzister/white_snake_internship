@@ -134,3 +134,24 @@ Pipfile.lock
 
 #static
 data/
+
+#flake8 config
+.flake8
+
+#mypy config
+mypy.ini
+
+#pre-commit
+.pre-commit-config.yaml
+
+#mypy run script for pre-commit
+run_mypy
+
+#pylint run script for pre-commit
+run_pylint
+
+#config file for pylint
+.pylintrc
+
+#black config file
+pyproject.toml
