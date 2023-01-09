@@ -9,11 +9,14 @@ from rest_framework.permissions import IsAdminUser
 
 from core.models import Provider
 from core.models import ProviderProfile
+from core.models import ProviderDiscount
 from core.serializers import ProviderSerializer
 from core.serializers import CarShowroomPurchasesSerializer
 from core.serializers import ProviderProfileSerializer
+from core.serializers import ProviderDiscountSerializer
 from core.services import get_purchases_response
 from core.services import get_profile_response
+from core.services import get_discounts_response
 
 
 class ProviderViewSet(
@@ -45,4 +48,13 @@ class ProviderViewSet(
 
         return get_profile_response(
             ProviderProfileSerializer, ProviderProfile, provider__pk=pk
+        )
+
+    @action(detail=True, url_path="discounts")
+    def get_discounts(self, request, pk=None):
+        """Return provider's discounts"""
+        return get_discounts_response(
+            ProviderDiscountSerializer,
+            ProviderDiscount,
+            provider__pk=pk
         )
