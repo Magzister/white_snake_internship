@@ -17,10 +17,10 @@ class CarShowroomProvider(IsActive):
     """
 
     car_showroom = models.ForeignKey(
-        CarShowroom, on_delete=models.CASCADE, related_name="car_showroom_user"
+        CarShowroom, on_delete=models.CASCADE, related_name="providers"
     )
     provider = models.ForeignKey(
-        Provider, on_delete=models.CASCADE, related_name="provider_user"
+        Provider, on_delete=models.CASCADE, related_name="car_showrooms"
     )
     number_of_purchases = models.IntegerField()
 

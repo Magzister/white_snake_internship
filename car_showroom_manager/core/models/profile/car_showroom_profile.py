@@ -20,7 +20,7 @@ class CarShowroomProfile(IsActive):
         related_name="car_showroom_profile",
     )
     car_showroom_name = models.CharField(max_length=30)
-    locarion_country = CountryField()
+    location_country = CountryField()
     location_city = models.CharField(max_length=30)
     location_street = models.CharField(max_length=30)
     location_house = models.CharField(max_length=30)
