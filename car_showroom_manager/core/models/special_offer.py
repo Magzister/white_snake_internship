@@ -15,7 +15,7 @@ class SpecialOffer(IsActive):
     Use SpecialOffer abstract class
     """
 
-    car_showroom = models.ForeignKey(
+    user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
         related_name="special_offers",

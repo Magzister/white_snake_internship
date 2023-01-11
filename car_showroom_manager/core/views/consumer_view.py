@@ -2,8 +2,6 @@
 Module with consumer view
 """
 
-from rest_framework import mixins
-from rest_framework.viewsets import GenericViewSet
 from rest_framework.decorators import action
 from rest_framework.permissions import IsAdminUser
 
@@ -11,16 +9,11 @@ from core.models import Consumer
 from core.models import ConsumerProfile
 from core.serializers import ConsumerSerializer
 from core.serializers import ConsumerProfileSerializer
-from core.services import get_profile_response
+from core.services import get_object_response
+from .custom_viewset import RetrieveUpdateDestroyListVireSet
 
 
-class ConsumerViewSet(
-    mixins.RetrieveModelMixin,
-    mixins.UpdateModelMixin,
-    mixins.DestroyModelMixin,
-    mixins.ListModelMixin,
-    GenericViewSet,
-):
+class ConsumerViewSet(RetrieveUpdateDestroyListVireSet):
     """
     Consumer list generic view set
     """
@@ -33,6 +26,9 @@ class ConsumerViewSet(
     def get_profile(self, request, pk=None):
         """Return consumer's profile"""
 
-        return get_profile_response(
-            ConsumerProfileSerializer, ConsumerProfile, consumer__pk=pk
+        return get_object_response(
+            ConsumerProfileSerializer,
+            ConsumerProfile,
+            many=False,
+            consumer__pk=pk,
         )

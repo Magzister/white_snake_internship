@@ -14,3 +14,7 @@ from core.serializers.profile import ConsumerProfileSerializer
 
 from core.serializers.m2m import ProviderPurchasesSeriaizer
 from core.serializers.m2m import CarShowroomPurchasesSerializer
+
+from core.serializers.vehicle import VehicleSerializer
+from core.serializers.vehicle import VehicleCharacteristicsSerializer
+from core.serializers.vehicle import DesiredVehicleCharacteristicsSerializer
